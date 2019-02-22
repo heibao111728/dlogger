@@ -13,5 +13,7 @@ int main()
     int age = 28;
     LOG_INFO("my wife is a beautiful girl, her name is %s, and her age is %d.", "gaojing", age);
 
+    dlogger::get_instance()->uninit_logger();
+
     return 0;
 }
