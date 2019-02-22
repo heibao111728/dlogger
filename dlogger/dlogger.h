@@ -48,11 +48,12 @@ public:
         }
     }
 
-    bool init_logger(char* file_name, log_type_e type, log_level_e level);
+    bool init_logger(char* log_path, char* module_name, log_type_e type, log_level_e level);
     void uninit_logger();
 
     bool is_log_directory_exist(char* log_dir);
     bool create_log_directory(char* log_dir);
+    bool create_log_file(char* log_path, char* module_name);
 
     char* get_local_time();
 
@@ -65,6 +66,7 @@ private:
     log_level_e m_log_level;
     log_type_e m_log_type;
     char m_time_string[50];
+    char m_current_log_file_name[50];
 };
 
 #define LOG_ERROR(fmt, ...) do{\

@@ -4,7 +4,7 @@
 int main()
 {
     //init sdk logger.
-    if (!dlogger::get_instance()->init_logger("E://dlogger_test.log", log_type_file, log_level_debug))
+    if (!dlogger::get_instance()->init_logger("e://log", NULL, log_type_file, log_level_debug))
     {
         printf("logger init failure.\n");
         return -1;
